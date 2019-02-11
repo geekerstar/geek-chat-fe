@@ -20,12 +20,12 @@
 <body>
 	
 	<header class="mui-bar mui-bar-nav title">
-	    <h1 class="mui-title title-color" id="geek_title"><b>极客聊</b></h1>
+	    <h1 class="mui-title title-color" id="muxin_title"><b>极客聊</b></h1>
 	</header>
 	
 	<nav class="mui-bar mui-bar-tab">
 	    <a class="mui-tab-item mui-active" tabindex="0">
-	        <span class="mui-icon mui-icon-compose"></span>
+	        <span class="mui-icon mui-icon-chat"></span>
 	        <span class="mui-tab-label">消息</span>
 	    </a>
 	    <a class="mui-tab-item" tabindex="1">
@@ -44,7 +44,7 @@
 	
 	<script type="text/javascript">
 		
-		var geekArray = [
+		var muxinArray = [
 			{
 				pageId: "geek-chatlist.html",
 				pageUrl: "geek-chatlist.html"
@@ -63,14 +63,14 @@
 			}
 		];
 		
-		var geekStyle = {
+		var muxinStyle = {
 			top: "44px",
 			bottom: "50px"
 		}
 		
 		mui.plusReady(function(){
 			
-			// 安卓上面禁止返回到登录注册页面
+			// 禁止返回到登录注册页面
 			mui.back = function() {
 				return false;
 			}
@@ -82,16 +82,16 @@
 			var indexWebview = plus.webview.currentWebview()
 			
 			// 向当前的主页webview追加子页的4张webview对象
-			for (var i = 0 ; i < geekArray.length ; i ++) {
-				var geekPage = plus.webview.create(geekArray[i].pageUrl, 
-													geekArray[i].pageId,
-													geekStyle);
+			for (var i = 0 ; i < muxinArray.length ; i ++) {
+				var muxinPage = plus.webview.create(muxinArray[i].pageUrl, 
+													muxinArray[i].pageId,
+													muxinStyle);
 				// 隐藏webview窗口
-				geekPage.hide();
+				muxinPage.hide();
 				// 追加每一个子页面到当前主页面
-				indexWebview.append(geekPage);
+				indexWebview.append(muxinPage);
 			}
-			plus.webview.show(geekArray[0].pageId);
+			plus.webview.show(muxinArray[0].pageId);
 			
 			
 			// 批量绑定tap事件，展示不同的页面
@@ -99,12 +99,12 @@
 				var tabindex = this.getAttribute("tabindex");
 				
 				// 显示点击的tab选项所对应的页面
-				plus.webview.show(geekArray[tabindex].pageId, "fade-in", 200);
+				plus.webview.show(muxinArray[tabindex].pageId, "fade-in", 200);
 				
 				// 隐藏其他的不需要的页面
-				for (var i = 0 ; i < geekArray.length ; i ++) {
+				for (var i = 0 ; i < muxinArray.length ; i ++) {
 					if (i != tabindex) {
-						plus.webview.hide(geekArray[i].pageId, "fade-out", 200);
+						plus.webview.hide(muxinArray[i].pageId, "fade-out", 200);
 					}
 				}
 			})
@@ -120,23 +120,23 @@
 				var connectionStatus = plus.networkinfo.getCurrentType();
 				if (connectionStatus != 0 && connectionStatus != 1) {
 					// 重新打开网络连接
-					var geek_title = document.getElementById("geek_title");
-					geek_title.innerHTML = "<b>极客聊</b>";
+					var muxin_title = document.getElementById("muxin_title");
+					muxin_title.innerHTML = "<b>极客聊</b>";
 				} else {
 					// 关闭网络连接
-					var geek_title = document.getElementById("geek_title");
-					geek_title.innerHTML = "<b>极客聊(未连接)</b>";
+					var muxin_title = document.getElementById("muxin_title");
+					muxin_title.innerHTML = "<b>极客聊(未连接)</b>";
 				}
 			});
 		}
 		
 		// 预加载
 		function initData() {
-			var imooc_chatlist = plus.webview.getWebviewById("geek-chatlist.html");
-			mui.fire(imooc_chatlist, "refresh");
+			var geek_chatlist = plus.webview.getWebviewById("geek-chatlist.html");
+			mui.fire(geek_chatlist, "refresh");
 			
-			var imooc_me = plus.webview.getWebviewById("geek-me.html");
-			mui.fire(imooc_me, "refresh");
+			var geek_me = plus.webview.getWebviewById("geek-me.html");
+			mui.fire(geek_me, "refresh");
 		}
 		
 	</script>

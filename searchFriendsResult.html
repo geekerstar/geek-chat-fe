@@ -76,7 +76,7 @@
 				var btn_add_friend = document.getElementById("btn_add_friend");
 				btn_add_friend.addEventListener("tap", function(){
 					
-					plus.nativeUI.showWaiting("请稍后...");
+					plus.nativeUI.showWaiting("请稍候...");
 					mui.ajax(app.serverUrl + "/u/addFriendRequest?myUserId=" + meInfo.id +
 									"&friendUsername=" + yourFriend.username, {
 						data:{},

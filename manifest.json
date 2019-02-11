@@ -3,8 +3,8 @@
     "id" : "H54C699FF", /*应用的标识，创建应用时自动生成，勿手动修改*/
     "name" : "极客聊", /*应用名称，程序桌面图标名称*/
     "version" : {
-        "name" : "1.0.1", /*应用版本名称*/
-        "code" : "83"
+        "name" : "1.0.5", /*应用版本名称*/
+        "code" : 85
     },
     "description" : "", /*应用描述信息*/
     "icons" : {
@@ -127,7 +127,7 @@
                         "spotlight" : "unpackage/res/icons/40x40.png",
                         "spotlight@2x" : "unpackage/res/icons/80x80.png"
                     },
-                    "appstore" : "/Users/geekerstar/Desktop/Twitter_App_128px_564714_easyicon.net.png"
+                    "appstore" : "/Users/geekerstar/Desktop/2DEF45A919C5544386D9269F3B4849F3.png"
                 },
                 "android" : {
                     "mdpi" : "unpackage/res/icons/48x48.png", /*普通屏程序图标，分辨率：48x48*/
@@ -172,8 +172,8 @@
     "dependencies" : {
         "pages" : {
             "index.html" : {
-                "resources" : [ "imooc-chatlist.html" ],
-                "refer" : [ "imooc-me.html", "imooc-discover.html", "imooc-contact.html" ],
+                "resources" : [ "geek-chatlist.html" ],
+                "refer" : [ "geek-me.html", "geek-discover.html", "geek-contact.html" ],
                 "priority" : 0
             },
             "login.html" : {
@@ -181,7 +181,7 @@
                 "refer" : [ "index.html" ],
                 "priority" : 0
             },
-            "imooc-me.html" : {
+            "geek-me.html" : {
                 "resources" : [],
                 "refer" : [ "myface.html", "mynickname.html", "myQRCode.html", "login.html" ],
                 "priority" : 0
@@ -191,7 +191,7 @@
                 "refer" : [ "plugin/v3.1.6/myface-uploader.html" ],
                 "priority" : 0
             },
-            "imooc-discover.html" : {
+            "geek-discover.html" : {
                 "resources" : [],
                 "refer" : [ "searchFriends.html", "scanme.html" ],
                 "priority" : 0
@@ -201,12 +201,12 @@
                 "refer" : [ "searchFriendsResult.html" ],
                 "priority" : 0
             },
-            "imooc-contact.html" : {
+            "geek-contact.html" : {
                 "resources" : [],
                 "refer" : [ "chatting.html" ],
                 "priority" : 0
             },
-            "imooc-chatlist.html" : {
+            "geek-chatlist.html" : {
                 "resources" : [],
                 "refer" : [ "chatting.html" ],
                 "priority" : 0

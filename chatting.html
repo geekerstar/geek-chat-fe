@@ -150,7 +150,7 @@
 						var dataContent = new app.DataContent(app.CHAT, chatMsg, null);
 						
 						// 调用websocket 发送消息到netty后端
-						var wsWebview = plus.webview.getWebviewById("imooc-chatlist.html");
+						var wsWebview = plus.webview.getWebviewById("geek-chatlist.html");
 						wsWebview.evalJS("CHAT.chat('" + JSON.stringify(dataContent) + "')");
 //						wsWebview.evalJS("CHAT.chat('" + msg_text_val + "')");
 						

@@ -3,19 +3,17 @@ window.app = {
 	/**
 	 * netty服务后端发布的url地址
 	 */
-	// nettyServerUrl: 'ws://192.168.11.228:8088/ws',
-	nettyServerUrl: 'ws://192.168.11.228:8088/ws',
-
+	nettyServerUrl: 'ws://60.205.220.236:8088/ws',
 	
 	/**
 	 * 后端服务发布的url地址
 	 */
-	serverUrl: 'http://192.168.11.228:8080',
+	serverUrl: 'http://60.205.220.236:8080/geekchat/',
 	
 	/**
 	 * 图片服务器的url地址
 	 */
-	imgServerUrl: 'http://10.211.55.10:88/geek/',
+	imgServerUrl: 'http://60.205.220.236:88/geek/',
 	
 	/**
 	 * 判断字符串是否为空
